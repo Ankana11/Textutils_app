@@ -24,11 +24,11 @@ export default function Textform(props) {
   const [Text, setText] = useState(" ");
   return (
 <>
-<div className='Container'>
+<div className='Container' style={{color:props.mode==="dark"?'white':'black'}}>
   <h1>{props.heading}</h1>   
 
   <div className="mb-3">
-  <textarea className="form-control" value ={Text} onChange={handleOnchange} id="exampleFormControlTextarea1"  rows="4"></textarea>
+  <textarea className="form-control" value ={Text} onChange={handleOnchange} style={{backgroundColor:props.mode==="dark"?'gray':'white' , color:props.mode==="dark"?'white':'black'}} id="exampleFormControlTextarea1"  rows="4"></textarea>
   </div>
   <button className="btn btn-primary my-3" onClick={handleup}>Uppercase</button>
   <button className="btn btn-primary mx-3" onClick={handlereverse}>Reverse Text</button>
@@ -36,7 +36,7 @@ export default function Textform(props) {
   <button className="btn btn-primary mx-2" onClick={handleclear}>clear text</button>
 </div>
 
-<div className="Container2">
+<div className="Container" style={{color:props.mode==="dark"?'white':'black'}}>
   <h1> Your Text Summary</h1>
   <p>{Text.split(" ").length} word and {Text.length} Charecter</p>
 </div> 
