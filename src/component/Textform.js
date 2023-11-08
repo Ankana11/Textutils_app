@@ -37,8 +37,12 @@ export default function Textform(props) {
 </div>
 
 <div className="Container" style={{color:props.mode==="dark"?'white':'black'}}>
-  <h1> Your Text Summary</h1>
-  <p>{Text.split(" ").length} word and {Text.length} Charecter</p>
+<h1>Your Text Summary</h1>
+  {Text && Text.trim() !== "" ? (
+    <p>{Text.split(" ").length} word and {Text.length} character</p>
+  ) : (
+    <p>No text input provided</p>
+  )}
 </div> 
 </> 
   )
