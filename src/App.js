@@ -8,7 +8,7 @@ function App() {
   const togglemode =()=>{
     if(mode==="light"){
     setMode('dark');
-    document.body.style.backgroundColor ="gray"
+    document.body.style.backgroundColor ="#0D1072"
     }
     else{
       setMode('light')
